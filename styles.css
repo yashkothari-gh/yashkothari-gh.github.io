@@ -1,0 +1,70 @@
+/* Dark and Light Theme Colors */
+:root {
+    --primary-color: #1e1e2e;
+    --secondary-color: #89b4fa;
+    --text-color: #cdd6f4;
+    --accent-color: #f38ba8;
+    --background-color: #181825;
+    --light-bg: #ffffff;
+    --light-text: #000000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+.job {
+    background: var(--primary-color);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Light Theme */
+.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.light-mode header {
+    background: var(--light-bg);
+    color: var(--light-text);
+}
+
+.light-mode button {
+    background: var(--secondary-color);
+}
