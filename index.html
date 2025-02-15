@@ -9,32 +9,56 @@
 <body>
     <header>
         <h1>Yash Kothari</h1>
-        <button id="theme-toggle">Toggle Theme</button>
     </header>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <span id="email">yash.kothari@example.com</span> <button onclick="copyToClipboard('email')">Copy</button></p>
+        <p>Phone: <span id="phone">+91 9876543210</span> <button onclick="copyToClipboard('phone')">Copy</button></p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java, Spring Boot</li>
+            <li>Apache Kafka, Flink</li>
+            <li>SQL, NoSQL (OracleDB, Cassandra, OpenSearch)</li>
+            <li>REST API Development</li>
+            <li>Cloud Technologies</li>
+        </ul>
+    </section>
     
     <section id="work-experience">
         <h2>Work Experience</h2>
         <div class="job">
             <h3>Senior Software Engineer - Qualys (June 2024 - Present)</h3>
-            <button class="toggle-details">Show/Hide Details</button>
-            <div class="details">
-                <p>Developed core backend REST API services...</p>
-            </div>
+            <p>Developed core components of a backend REST API service to automate customer onboarding, including designing API endpoints, maintaining database connections, and integrating with client-side UI service to get users ready to start with compliance score calculations within 1 day, which took a week before.</p>
+            <p>Developed functionality to access data from S3 buckets to support downloading overall compliance score reports.</p>
+            <p>Integrated compliance score report generation with a schedule service to enhance user experience, allowing customers to schedule report generation.</p>
         </div>
         <div class="job">
             <h3>Software Engineer - Qualys (July 2022 - May 2024)</h3>
-            <button class="toggle-details">Show/Hide Details</button>
-            <div class="details">
-                <p>Led backend development for Policy Compliance remediation...</p>
-            </div>
+            <p>Led developing key functionalities of a backend REST API service for the remediation project of Policy Compliance by creating robust API endpoints, managing database interactions, and ensuring seamless integration with the data processing pipeline to update the live status of remediation to the customer.</p>
+            <p>Reengineered the data pipeline with Apache Flink, optimizing it to process millions of heavy records in under 30 minutes, improving data throughput and efficiency.</p>
         </div>
         <div class="job">
             <h3>Software Engineer Intern - Qualys (Jan 2022 - June 2022)</h3>
-            <button class="toggle-details">Show/Hide Details</button>
-            <div class="details">
-                <p>Gained experience with microservices, Kafka, Flink...</p>
-            </div>
+            <p>Gained in-depth knowledge of microservices architecture and technologies like Spring Boot, Apache Kafka, Apache Cassandra, OpenSearch, and Apache Flink, and applied them in the Policy Compliance remediation project.</p>
+            <p>Gained hands-on experience with corporate tools like JIRA, Confluence, and Stash for project management, documentation, and version control.</p>
         </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>B.Tech in Information Technology</strong></p>
+        <p>Vishwakarma Institute of Information Technology, Pune (2018 - 2022)</p>
+        <p>CGPA: 9.2/10</p>
+    </section>
+
+    <section id="accomplishments">
+        <h2>Accomplishments</h2>
+        <p>Contributed to optimizing backend services, improving performance by 40%.</p>
+        <p>Received recognition for reengineering compliance pipelines, reducing processing time significantly.</p>
     </section>
     
     <script src="script.js"></script>
