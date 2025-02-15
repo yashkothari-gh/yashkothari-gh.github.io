@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Yash Kothari - Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+            background-color: #f4f4f4;
         }
         header {
             background: #333;
@@ -20,6 +21,26 @@
         section {
             padding: 20px;
             border-bottom: 1px solid #ddd;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .toggle-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
         }
         footer {
             background: #333;
@@ -30,44 +51,76 @@
             bottom: 0;
         }
     </style>
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert("Copied: " + text);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Yash Kothari</h1>
+        <p>Senior Software Engineer at Qualys</p>
     </header>
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: example@example.com</p>
-        <p>Phone: +1234567890</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+        <p>Email: yashkothari339@gmail.com <button class="toggle-button" onclick="copyToClipboard('yashkothari339@gmail.com')">Copy</button></p>
+        <p>Phone: +91-8793885301 <button class="toggle-button" onclick="copyToClipboard('+91-8793885301')">Copy</button></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yash-kothari-3b4277190" target="_blank">linkedin.com/in/yash-kothari-3b4277190</a></p>
+        <p>Location: Pune, India</p>
     </section>
     
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Java, Spring Boot</li>
-            <li>SQL & NoSQL Databases</li>
-            <li>Kafka, Flink</li>
-            <li>Microservices Architecture</li>
+        <button class="toggle-button" onclick="toggleVisibility('skills-list')">Show/Hide Skills</button>
+        <ul id="skills-list">
+            <li>Java, C++, Python</li>
+            <li>Spring Boot, Apache Kafka, Apache Flink</li>
+            <li>SQL, Cassandra, Elasticsearch</li>
+            <li>Docker, Kubernetes, Jenkins</li>
+            <li>Prometheus, Grafana</li>
         </ul>
     </section>
     
     <section id="work-experience">
         <h2>Work Experience</h2>
-        <h3>Software Developer - XYZ Company</h3>
-        <p>January 2022 - Present</p>
-        <p>Worked on backend development using Java Spring Boot, Kafka, and Flink.</p>
+        <button class="toggle-button" onclick="toggleVisibility('work-details')">Show/Hide Experience</button>
+        <div id="work-details" class="hidden">
+            <h3>Senior Software Engineer - Qualys (June 2024 - Present)</h3>
+            <p>Developed core backend REST API services for automating customer onboarding and compliance score generation.</p>
+            
+            <h3>Software Engineer - Qualys (July 2022 - May 2024)</h3>
+            <p>Led backend development for the remediation project of Policy Compliance, reengineered data pipelines using Apache Flink.</p>
+            
+            <h3>Software Engineer Intern - Qualys (Jan 2022 - June 2022)</h3>
+            <p>Worked with microservices architecture and technologies like Spring Boot, Kafka, Cassandra, and OpenSearch.</p>
+        </div>
     </section>
     
     <section id="education">
         <h2>Education</h2>
-        <h3>Bachelor's in Computer Science</h3>
-        <p>ABC University, 2018 - 2022</p>
+        <h3>B.Tech in Information Technology</h3>
+        <p>Vishwakarma Institute of Information Technology, Pune (2018 - 2022)</p>
+        <p>CGPA: 9.2/10</p>
+    </section>
+    
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <p>Promoted to Senior Software Engineer within two years of full-time role at Qualys (June 2024).</p>
     </section>
     
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <p>&copy; 2025 Yash Kothari</p>
     </footer>
 </body>
 </html>
