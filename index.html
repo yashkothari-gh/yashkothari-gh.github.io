@@ -27,6 +27,20 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+        .toggle-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            margin: 10px 0;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -35,6 +49,16 @@
             margin-top: 20px;
         }
     </style>
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -63,14 +87,34 @@
         
         <section class="experience">
             <h2>Work Experience</h2>
+            
             <h3>Senior Software Engineer - Qualys (June 2024 - Present)</h3>
-            <p>Developed core backend REST API services for automating customer onboarding and compliance score generation.</p>
+            <button class="toggle-btn" onclick="toggleDetails('senior-engineer-details')">Show/Hide Details</button>
+            <div id="senior-engineer-details" class="details">
+                <ul>
+                    <li>Developed core components of a backend REST API service to automate customer onboarding, reducing time from a week to 1 day.</li>
+                    <li>Developed functionality to access data from S3 buckets to support downloading overall compliance score reports.</li>
+                    <li>Integrated compliance score report generation with a scheduling service to enhance user experience.</li>
+                </ul>
+            </div>
             
             <h3>Software Engineer - Qualys (July 2022 - May 2024)</h3>
-            <p>Led backend development for the remediation project of Policy Compliance, reengineered data pipelines using Apache Flink.</p>
+            <button class="toggle-btn" onclick="toggleDetails('software-engineer-details')">Show/Hide Details</button>
+            <div id="software-engineer-details" class="details">
+                <ul>
+                    <li>Led development of key functionalities for a backend REST API service in the Policy Compliance remediation project.</li>
+                    <li>Reengineered the data pipeline with Apache Flink, optimizing it to process millions of records in under 30 minutes.</li>
+                </ul>
+            </div>
             
             <h3>Software Engineer Intern - Qualys (Jan 2022 - June 2022)</h3>
-            <p>Worked with microservices architecture and technologies like Spring Boot, Kafka, Cassandra, and OpenSearch.</p>
+            <button class="toggle-btn" onclick="toggleDetails('intern-details')">Show/Hide Details</button>
+            <div id="intern-details" class="details">
+                <ul>
+                    <li>Gained in-depth knowledge of microservices architecture and technologies like Spring Boot, Kafka, Cassandra, and OpenSearch.</li>
+                    <li>Worked with corporate tools like JIRA, Confluence, and Stash for project management and version control.</li>
+                </ul>
+            </div>
         </section>
         
         <section class="education">
