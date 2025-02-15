@@ -32,19 +32,28 @@
         <h2>Work Experience</h2>
         <div class="job">
             <h3>Senior Software Engineer - Qualys (June 2024 - Present)</h3>
-            <p>Developed core components of a backend REST API service to automate customer onboarding, including designing API endpoints, maintaining database connections, and integrating with client-side UI service to get users ready to start with compliance score calculations within 1 day, which took a week before.</p>
-            <p>Developed functionality to access data from S3 buckets to support downloading overall compliance score reports.</p>
-            <p>Integrated compliance score report generation with a schedule service to enhance user experience, allowing customers to schedule report generation.</p>
+            <button class="toggle-btn" onclick="toggleDetails('senior')">View Details</button>
+            <div class="job-details" id="senior">
+                <p>Developed core components of a backend REST API service to automate customer onboarding, including designing API endpoints, maintaining database connections, and integrating with client-side UI service to get users ready to start with compliance score calculations within 1 day, which took a week before.</p>
+                <p>Developed functionality to access data from S3 buckets to support downloading overall compliance score reports.</p>
+                <p>Integrated compliance score report generation with a schedule service to enhance user experience, allowing customers to schedule report generation.</p>
+            </div>
         </div>
         <div class="job">
             <h3>Software Engineer - Qualys (July 2022 - May 2024)</h3>
-            <p>Led developing key functionalities of a backend REST API service for the remediation project of Policy Compliance by creating robust API endpoints, managing database interactions, and ensuring seamless integration with the data processing pipeline to update the live status of remediation to the customer.</p>
-            <p>Reengineered the data pipeline with Apache Flink, optimizing it to process millions of heavy records in under 30 minutes, improving data throughput and efficiency.</p>
+            <button class="toggle-btn" onclick="toggleDetails('engineer')">View Details</button>
+            <div class="job-details" id="engineer">
+                <p>Led developing key functionalities of a backend REST API service for the remediation project of Policy Compliance by creating robust API endpoints, managing database interactions, and ensuring seamless integration with the data processing pipeline to update the live status of remediation to the customer.</p>
+                <p>Reengineered the data pipeline with Apache Flink, optimizing it to process millions of heavy records in under 30 minutes, improving data throughput and efficiency.</p>
+            </div>
         </div>
         <div class="job">
             <h3>Software Engineer Intern - Qualys (Jan 2022 - June 2022)</h3>
-            <p>Gained in-depth knowledge of microservices architecture and technologies like Spring Boot, Apache Kafka, Apache Cassandra, OpenSearch, and Apache Flink, and applied them in the Policy Compliance remediation project.</p>
-            <p>Gained hands-on experience with corporate tools like JIRA, Confluence, and Stash for project management, documentation, and version control.</p>
+            <button class="toggle-btn" onclick="toggleDetails('intern')">View Details</button>
+            <div class="job-details" id="intern">
+                <p>Gained in-depth knowledge of microservices architecture and technologies like Spring Boot, Apache Kafka, Apache Cassandra, OpenSearch, and Apache Flink, and applied them in the Policy Compliance remediation project.</p>
+                <p>Gained hands-on experience with corporate tools like JIRA, Confluence, and Stash for project management, documentation, and version control.</p>
+            </div>
         </div>
     </section>
 
